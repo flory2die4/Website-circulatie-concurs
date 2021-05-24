@@ -5,3 +5,5 @@ const Header = ({ question }) => {
 		</header>
 	)
 }
+
+export default Header;
