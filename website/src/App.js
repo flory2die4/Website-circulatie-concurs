@@ -33,8 +33,8 @@ const App = () => {
     setQuestions(questions.filter((question) => questions.indexOf(question) !== 0))
   }
 
-  const verifyAnswear = (correctAnswear, answear) => {
-    if (questions === correctAnswear) {
+  const verifyAnswear = (answear, correctAnswear=questions[0].correctAnswear) => {
+    if (answear === correctAnswear) {
       console.log('isCorrect');
     }
 
@@ -43,6 +43,7 @@ const App = () => {
     }
     setShowAnswears(!showAnswears)
     setTimeout(() => {
+      goToNextQuestion()
       setShowAnswears(!showAnswears)
     }, 2000)
   }
@@ -50,7 +51,7 @@ const App = () => {
   return (
     <div>
       <Header question={questions[0].question} />
-      { showAnswears && <Answears answears={questions[0].answears} /> }
+      { showAnswears && <Answears verifyAnswear={verifyAnswear} answears={questions[0].answears} /> }
     </div>
   )
 }
