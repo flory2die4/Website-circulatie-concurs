@@ -44,7 +44,7 @@ const App = () => {
     setShowAnswears(!showAnswears)
     setTimeout(() => {
       goToNextQuestion()
-      setShowAnswears(!showAnswears)
+      setShowAnswears(true)
     }, 2000)
   }
 
