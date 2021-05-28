@@ -2,7 +2,6 @@
 
 # dependencies
 /venv
-/website/venv
 /node_modules
 /.pnp
 .pnp.js
