@@ -11,6 +11,15 @@ body {
   color: white;
 }
 
+input {
+  border-style: none none groove none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
 .header {
   text-align: center;
 }
@@ -90,4 +99,26 @@ p {
   left: .6rem;
   border-bottom: .7rem solid transparent;
   border-left: 1rem solid #212128;
+}
+
+.plus {
+  display: flex;
+}
+
+.plus-first-line {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 1rem;
+  height: .1rem;
+  background-color: #212128;
+}
+
+.plus-second-line {
+  position: absolute;
+  left: 25;
+  top: 25%;
+  width: .1rem;
+  height: 1rem;
+  background-color: #212128;
 }

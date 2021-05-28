@@ -1,6 +1,6 @@
-import Header from './Components/Header';
-import Answears from './Components/Answear';
-import Quizzis from './Components/Quizzis';
+import Header from './Components/QuizzPage/Header';
+import Answears from './Components/QuizzPage/Answears';
+import Quizzis from './Components/AllQuizzisPage/Quizzis';
 import { useState } from 'react'
 import { 
   BrowserRouter as Router,
@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom'
 
 const App = () => {
+  const [textIfAnswears, setTextifAnswears] = useState('')
+  const [background, setBackground] = useState('basic')
   const [questions,  setQuestions] = useState([
     {
       question: "blabasdfghjjjjjjla",
@@ -40,28 +42,54 @@ const App = () => {
 
   const verifyAnswear = (answear, correctAnswear=questions[0].correctAnswear) => {
     if (answear === correctAnswear) {
-      console.log('isCorrect');
+      setTextifAnswears('Corect');
+      setShowAnswears(!showAnswears)
+      setBackground('correct')
+      setTimeout(() => {
+        goToNextQuestion()
+        setShowAnswears(true)
+        setBackground('basic');
+      }, 2000)
     }
 
     else {
-      console.log("it's incorrect");
+      setTextifAnswears(`Nu, raspunsul era ${correctAnswear}`)
+      setShowAnswears(!showAnswears)
+      setBackground('wrong')
+      setTimeout(() => {
+        goToNextQuestion()
+        setShowAnswears(true)
+        setBackground('basic');
+      }, 2000)
     }
-    setShowAnswears(!showAnswears)
-    setTimeout(() => {
-      goToNextQuestion()
-      setShowAnswears(true)
-    }, 2000)
+    
   }
 
   return (
     <Router>
-      <div className="container">
+      <div className="container" style={{
+        backgroundColor: background === 'basic' ? '#212128' : background === 'correct' ? '#0eed73'  : '#eb4034'
+      }}>
         <Route exact path='/'>
           <Quizzis quizzis={['1', '2', '2', '4']} />
         </Route>
         <Route path='/quizz'>
-          <Header question={questions[0].question} />
-          { showAnswears && <Answears verifyAnswear={verifyAnswear} answears={questions[0].answears} /> }
+        { !showAnswears &&
+          <h1 style={{
+            textAlign: 'center',
+            position: 'relative',
+            top: '20rem'
+          }}>{textIfAnswears}</h1>
+        }
+        { showAnswears && <Header 
+            question={questions[0] ? questions[0].question : ''} 
+          /> }
+          { showAnswears && <Answears
+                              verifyAnswear={verifyAnswear} 
+                              answears={questions[0] ? questions[0].answears : []} 
+                            /> 
+                            
+          }
         </Route>
       </div>
     </Router>
