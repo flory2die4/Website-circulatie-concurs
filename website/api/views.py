@@ -2,7 +2,7 @@ from flask import Blueprint, json, jsonify
 
 views = Blueprint('views', __name__) 
 
-@views.route('/haha')
-def haha():
-    return jsonify({'12': '1'})
+@views.route('/quizzes')
+def get_all_quizzes():
+    return {'12': '1'}
     
