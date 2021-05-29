@@ -1,6 +1,8 @@
 import Header from './Components/QuizzPage/Header';
 import Answears from './Components/QuizzPage/Answears';
 import Quizzis from './Components/AllQuizzisPage/Quizzis';
+import AddQuizz from './Components/AddQuizzPage/AddQuizz';
+import Footer from './Components/Footer';
 import { useState } from 'react'
 import { 
   BrowserRouter as Router,
@@ -91,6 +93,10 @@ const App = () => {
                             
           }
         </Route>
+        <Route path='/add-quizz'>
+          <AddQuizz title="Adauga un chestionar" />
+        </Route>
+        <Footer text="Zamfir Eduard Concursul Regional Aplicații IT „Pe calculator lucrăm, circulaţie să-nvăţăm“ – ediție specială 2021." />
       </div>
     </Router>
   )

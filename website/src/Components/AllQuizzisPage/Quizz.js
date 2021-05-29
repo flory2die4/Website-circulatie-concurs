@@ -5,7 +5,7 @@ const Quizz = ({ name, color, add }) => {
     const history =  useHistory();
     return (
         <div 
-            onClick={() => history.push(`${add ? 'add-task' : 'quizz'}`)}
+            onClick={() => history.push(`${add ? 'add-quizz' : 'quizz'}`)}
             style={{
                 backgroundColor: color,
             }}

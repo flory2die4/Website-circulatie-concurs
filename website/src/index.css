@@ -12,7 +12,23 @@ body {
 }
 
 input {
-  border-style: none none groove none;
+  background-color: inherit !important;
+  color: white;
+  text-align: center !important;
+  border-style: hidden hidden groove hidden !important;
+  outline: none !important;
+  border-color: rgba(227,	62,	87, 0.5) !important;
+  font-size: 1rem !important;
+  width: 12rem !important;
+}
+
+.form-control {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0 0 0;
 }
 
 .container {
@@ -121,4 +137,16 @@ p {
   width: .1rem;
   height: 1rem;
   background-color: #212128;
+}
+
+.footer {
+  position: sticky;
+  top: 96%;
+}
+
+.footer-text {
+  text-align: center;
+  color: white;
+  font-size: .7rem;
+  width: 100%;
 }
