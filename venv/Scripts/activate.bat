@@ -8,7 +8,11 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
+<<<<<<< HEAD
 set VIRTUAL_ENV=C:\Users\X\Desktop\Website\venv
+=======
+set VIRTUAL_ENV=C:\Users\Lenovo\Desktop\website-circulatie-concurs\venv
+>>>>>>> e904b0ad8ce52b782091d94f1a2e9beb07e2e71d
 
 if not defined PROMPT set PROMPT=$P$G
 

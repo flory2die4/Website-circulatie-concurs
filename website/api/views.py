@@ -1,4 +1,4 @@
-from flask import Blueprint, json, jsonify, requests
+from flask import Blueprint, json, jsonify, request
 from .models import Quizz
 from . import db
 
@@ -9,3 +9,6 @@ def get_all_quizzes():
     return {"ok": '200'}
 
 @views.route('/add-question', methods=['PUT'])
+def add_question():
+    data = request.get_json()
+    

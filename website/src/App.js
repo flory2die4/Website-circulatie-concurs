@@ -3,7 +3,10 @@ import Answears from './Components/QuizzPage/Answears';
 import Quizzis from './Components/AllQuizzisPage/Quizzis';
 import AddQuizz from './Components/AddQuizzPage/AddQuizz';
 import Footer from './Components/Footer';
+<<<<<<< HEAD
 import AddQuestion from './Components/AddQuizzPage/AddQuestion'
+=======
+>>>>>>> e904b0ad8ce52b782091d94f1a2e9beb07e2e71d
 import { useState } from 'react'
 import { 
   BrowserRouter as Router,
@@ -94,12 +97,18 @@ const App = () => {
                             
           }
         </Route>
+<<<<<<< HEAD
         <Route exact path='/add-quizz'>
           <AddQuizz title="Adauga un chestionar" />
         </Route>
         <Route exact path='/add-question'>
           <AddQuestion title='Adauga o intrebare' />
         </Route>
+=======
+        <Route path='/add-quizz'>
+          <AddQuizz title="Adauga un chestionar" />
+        </Route>
+>>>>>>> e904b0ad8ce52b782091d94f1a2e9beb07e2e71d
         <Footer text="Zamfir Eduard Concursul Regional Aplicații IT „Pe calculator lucrăm, circulaţie să-nvăţăm“ – ediție specială 2021." />
       </div>
     </Router>

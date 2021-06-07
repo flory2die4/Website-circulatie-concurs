@@ -18,7 +18,11 @@ deactivate () {
     # be called to get it to forget past commands.  Without forgetting
     # past commands the $PATH changes we made may not be respected
     if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
+<<<<<<< HEAD
         hash -r 2> /dev/null
+=======
+        hash -r
+>>>>>>> e904b0ad8ce52b782091d94f1a2e9beb07e2e71d
     fi
 
     if [ -n "${_OLD_VIRTUAL_PS1:-}" ] ; then
@@ -37,7 +41,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="C:\Users\X\Desktop\Website\venv"
+=======
+VIRTUAL_ENV="C:\Users\Lenovo\Desktop\website-circulatie-concurs\venv"
+>>>>>>> e904b0ad8ce52b782091d94f1a2e9beb07e2e71d
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -54,7 +62,21 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
+<<<<<<< HEAD
     PS1="(venv) ${PS1:-}"
+=======
+    if [ "x(venv) " != x ] ; then
+	PS1="(venv) ${PS1:-}"
+    else
+    if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
+        # special case for Aspen magic directories
+        # see https://aspen.io/
+        PS1="[`basename \`dirname \"$VIRTUAL_ENV\"\``] $PS1"
+    else
+        PS1="(`basename \"$VIRTUAL_ENV\"`)$PS1"
+    fi
+    fi
+>>>>>>> e904b0ad8ce52b782091d94f1a2e9beb07e2e71d
     export PS1
 fi
 
@@ -62,5 +84,9 @@ fi
 # be called to get it to forget past commands.  Without forgetting
 # past commands the $PATH changes we made may not be respected
 if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
+<<<<<<< HEAD
     hash -r 2> /dev/null
+=======
+    hash -r
+>>>>>>> e904b0ad8ce52b782091d94f1a2e9beb07e2e71d
 fi
