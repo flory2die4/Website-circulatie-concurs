@@ -13,7 +13,8 @@ const Quizz = ({ name, color, add }) => {
         >
             <p style={{
                 fontSize: '1rem',
-                margin: '.3rem'
+                margin: '.3rem',
+                textAlign: 'center',
             }}
             >{ name }</p>
             <div style={{
